@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/*** General Styles ***/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 375px;
+	min-height: 100vh;
+}
+
+img {
+	display: block;
+	object-fit: cover;
+	max-width: 100%;
+}
+
+/*** Page Styles ***/
+.attribution {
+	margin-top: 10px;
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+:root {
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+	--very-dark-blue: hsl(234, 12%, 34%);
+	--grayish-blue: hsl(229, 6%, 66%);
+	--very-light-gray: hsl(0, 0%, 98%);
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+}
+
+body {
+	background-color: var(--very-light-gray);
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	text-align: center;
+}
+
+.heading__main {
+	color: var(--very-dark-blue);
+	margin: 0.2em auto;
+}
+
+.heading__main--normal {
+	font-weight: 200;
+}
+
+.heading__main--bold {
+	font-weight: bold;
+}
+
+.heading__sub {
+	color: var(--grayish-blue);
+	max-width: 60%;
+	margin: 0 auto;
+	line-height: 1.8;
+}
+
+.features {
+	margin-top: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+
+.features > * {
+	flex: 1;
+}
+
+.features__middle {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.features__box {
+	min-height: 14em;
+	padding: 1.5em;
+	box-shadow: 0px 10px 30px -20px var(--blue);
+	border-radius: 5px;
+	border-top: 4px solid;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.features__box--border-cyan {
+	border-color: var(--cyan);
+}
+
+.features__box--border-red {
+	border-color: var(--red);
+}
+
+.features__box--border-orange {
+	border-color: var(--orange);
+}
+
+.features__box--border-blue {
+	border-color: var(--blue);
+}
+
+.feature__title {
+	font-size: 1.2em;
+	color: var(--very-dark-blue);
+}
+
+.feature__text {
+	font-size: 0.8em;
+	color: var(--grayish-blue);
+	margin-bottom: 0.5em;
+}
+
+.feature__icon {
+	margin-top: auto;
+	align-self: flex-end;
+}
+
+/*** Mobile ***/
+@media (max-width: 769px) {
+	.features {
+		flex-direction: column;
+	}
+
+	.features__box {
+		width: 100%;
+	}
+}
